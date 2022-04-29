@@ -11,7 +11,7 @@ programa
 		//exe05()
 		//exe06()
 		//exe07()
-		exe08()
+		//exe08()
 		//exe09()
 		//exe10()
 	}
@@ -34,19 +34,19 @@ programa
 		}
 	funcao exe02()
 	{
-		inteiro numero[8],numerM =0,posi =0
+		inteiro numero[8],numeroMaior =0,posicao =0
 		 
-		para (inteiro i =0; i<=7; i++){
+		para (inteiro i =0; i < 8; i++){
 			escreva("insira um número ")
 			leia(numero[i])
 			
-			se(numero[i] > numerM){
-				numerM = numero[i]
-				posi = i
+			se(numero[i] > numeroMaior){
+				numeroMaior = numero[i]
+				posicao = i
 			}
 		
 			}
-			escreva("Aqui está número maior ", numerM, " e a posição é ", posi)
+			escreva("Aqui está número maior ", numeroMaior, " e a posição é ", posicao)
 	}
 	funcao exe03()
 	{
@@ -66,12 +66,10 @@ programa
 					escreva("\nE a soma dos número impares ",soma)
 			}
 			
-		
 		}
 	funcao exe04()
 		{
-			inteiro numero[5],aocontrario = 4,numero2[5]
-
+			inteiro numero[5],invertido = 4,numero2[5]
 
 			para(inteiro i=0;i<5;i++){
 				
@@ -80,9 +78,9 @@ programa
 				
 			}
 			para(inteiro i=0;i<5;i++){
-				numero2[aocontrario] = numero[i]
-				escreva("\n", aocontrario,") ",numero2[aocontrario])
-				aocontrario = aocontrario -1
+				numero2[invertido] = numero[i]
+				escreva("\n", invertido,") ",numero2[invertido])
+				invertido = invertido -1
 				}
 		}
 	funcao exe05()
@@ -102,7 +100,6 @@ programa
 			se(numero[i]%conta ==0){
 				escreva("\n", numero[i]," é divisivel por ",conta)
 				}
-			
 		
 			}
 	}
@@ -187,8 +184,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3103; 
- * @DOBRAMENTO-CODIGO = [4, 17, 34, 50, 70, 87, 108, 124, 157, 167];
+ * @POSICAO-CURSOR = 3358; 
+ * @DOBRAMENTO-CODIGO = [17, 34, 50, 69, 85, 105, 121, 139, 154, 164];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
