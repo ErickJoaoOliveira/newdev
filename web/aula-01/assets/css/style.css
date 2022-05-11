@@ -1,0 +1,35 @@
+.body {
+  background-color: black;
+}
+.titulo {
+  font-family: 'Roboto Flex', sans-serif;
+  color: rgb(255, 255, 255);
+  font-style: bold;
+  font-size: 50px;
+}
+
+.font {
+  font-family: 'Roboto Flex', sans-serif;
+  color: rgb(255, 255, 255);
+  font-style: none;
+  font-size: 30px;
+}
+
+.lista {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anchor {
+  width: 100%;
+}
+
+.imgs {
+  /*width: 200px;
+  height: 200px;
+  margin-left: 50%;
+  background-position: center;
+  object-fit: cover;*/
+  margin-left: 50%;
+}

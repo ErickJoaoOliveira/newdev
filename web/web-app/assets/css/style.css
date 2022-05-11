@@ -1,0 +1,178 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  position: absolute;
+  width: 25rem;
+  height: 67rem;
+  left: 0rem;
+  top: 4rem;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 67.7rem;
+  text-align: center;
+
+  background-color: #dce9e2;
+}
+.font {
+  position: absolute;
+  width: 15rem;
+  height: 1.3125px;
+  left: 3.75rem;
+  top: 2.5625rem;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 150%;
+
+  letter-spacing: 0.08em;
+
+  color: #00856f;
+}
+.subtitulo {
+  position: absolute;
+  width: 20.4375rem;
+  height: 8.25rem;
+  left: 2rem;
+  top: 6rem;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: #212529;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.texto {
+  position: absolute;
+  width: 20rem;
+  height: 6rem;
+  left: 1.4rem;
+  top: 14rem;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #495057;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+
+  position: absolute;
+  width: 16rem;
+  height: 3.2rem;
+  left: 3.5rem;
+  top: 23rem;
+
+  background: #00856f;
+  border-radius: 2.5rem;
+}
+
+.imagem {
+  position: absolute;
+  width: 16rem;
+  height: 21rem;
+  left: 3rem;
+  top: 30rem;
+}
+
+.tabela {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 20rem;
+  height: 29rem;
+  left: 1.4rem;
+  top: 50rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 4.1rem;
+
+  background: #fffaf1;
+
+  border: 0.06rem solid #dce9e2;
+  border-radius: 0.3rem;
+}
+.subtitulos-numeros {
+  width: 10rem;
+  height: 3.8rem;
+  left: 6.5rem;
+  top: 51px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 130%;
+
+  color: #212529;
+}
+.texto-numero {
+  width: 9.4rem;
+  height: 1.4rem;
+  left: 7rem;
+  top: 58rem;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 150%;
+
+  color: #00856f;
+}
+
+.texto-depois {
+  position: absolute;
+  width: 76px;
+  height: 21px;
+  left: 149px;
+  top: 318px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+
+  letter-spacing: 0.08em;
+
+  color: #00856f;
+}
+
+.fundo {
+  position: absolute;
+  width: 375px;
+  height: 2034px;
+  left: 375px;
+  top: 1151px;
+
+  background: #f7f9f9;
+}
