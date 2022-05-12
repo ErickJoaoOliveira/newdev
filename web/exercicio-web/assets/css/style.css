@@ -1,0 +1,142 @@
+.caixa {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  width: 447px;
+  height: 629px;
+
+  background: #ffffff;
+  border: 1px solid #0720fd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 10.5rem;
+  position: absolute;
+  width: 106px;
+  height: 28px;
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.texto {
+  margin-top: 4rem;
+  margin-left: 2.5rem;
+  position: absolute;
+  width: 361px;
+  height: 284px;
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+}
+.caixa-botao {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fonte {
+  width: 83px;
+  height: 18px;
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.texto-cima-botao {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 26rem;
+  width: 100%;
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.botao {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 38px 16px 32px;
+  gap: 16px;
+
+  position: relative;
+  width: 170px;
+  height: 50px;
+
+  background: #8d0000;
+  border-radius: 80px;
+  border-color: none;
+}
+.botao:hover {
+  cursor: pointer;
+}
+
+.botao02 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 38px 16px 32px;
+  gap: 16px;
+
+  position: relative;
+  width: 170px;
+  height: 50px;
+
+  background: #00856f;
+  border-radius: 80px;
+}
+.botao02:hover {
+  cursor: pointer;
+}
+
+.texto-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-left: 3.5rem;
+  position: absolute;
+  width: 320px;
+  height: 17px;
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-transform: uppercase;
+
+  color: #000000;
+}

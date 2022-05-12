@@ -1,0 +1,60 @@
+.tudo {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.lol {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 590px;
+  height: 550px;
+
+  background: #ffa5a5;
+}
+
+.cinza {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 61px;
+  width: 443px;
+  height: 428px;
+
+  background: #bdbbbb;
+}
+
+.verde {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 58px;
+  width: 331px;
+  height: 321px;
+
+  background: #128d0f;
+}
+
+.verde-escuro {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 66px;
+  width: 190px;
+  height: 192px;
+
+  background: #043c2e;
+}
+
+.circulo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 55px;
+  width: 80px;
+  height: 80px;
+
+  background: #ff0000;
+  border-radius: 50px;
+}
