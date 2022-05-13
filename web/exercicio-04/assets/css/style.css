@@ -1,0 +1,32 @@
+
+body{
+    background: linear-gradient(#02ffab,#008f77,#015043);
+    background-repeat: no-repeat;
+    background-color: #015043;
+}
+
+.navbar{
+    padding-top: 5.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+   
+}
+
+.container{
+    border-radius: 10px;
+    float: center;
+    border-color: none transparent;
+    
+}
+
+.container-audio{
+    align-items: flex-end;
+    display:flex;
+    width: 15rem;
+    height: 1rem;
+    position: absolute;
+    padding: auto;
+    margin-top: 15rem;
+}

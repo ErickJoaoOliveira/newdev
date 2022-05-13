@@ -1,0 +1,59 @@
+.cabecalho {
+  background: rgba(240, 92, 84, 0.86);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  color: white;
+}
+
+texto {
+  font-style: bold;
+  display: flex;
+  line-height: 50px;
+  vertical-align: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  color: white;
+}
+.caixa {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.titulobranco {
+  font-family: 'Oleo Script', cursive;
+  font-style: bold;
+  font-size: 30px;
+  line-height: 50px;
+
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+}
+.titulonegro {
+  margin-left: 1rem;
+  font-size: 30px;
+  font-style: bold;
+  display: flex;
+  line-height: 50px;
+  vertical-align: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  color: rgb(0, 0, 0);
+}
