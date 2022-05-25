@@ -1,0 +1,110 @@
+header {
+  height: 26vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(23, 76, 79);
+  box-shadow: 12px 0 10px rgb(0, 0, 0);
+}
+
+header img {
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  width: 45%;
+}
+
+.caixa {
+  display: flex;
+}
+
+.titulo {
+  font-family: 'Mr Dafoe', cursive;
+  padding-top: 2.7%;
+  padding-left: 10rem;
+  font-size: 4.5rem;
+  color: #ffff;
+}
+
+.texto-subtitulo {
+  font-family: 'Charm', cursive;
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-block-end: 4rem;
+  padding-left: 1rem;
+}
+
+.caixas-azuis {
+  display: flex;
+  justify-content: space-around;
+}
+
+.caixa-azul {
+  border-radius: 1.5rem;
+  width: 14rem;
+  height: 14rem;
+  background-color: rgb(17, 167, 167);
+}
+
+.caixa-azul img:hover {
+  cursor: pointer;
+}
+
+.pandinha {
+  border-radius: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.9%;
+  padding-top: 1.9%;
+  width: 96%;
+}
+
+.caixas-azuis-calça {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contato img {
+  padding-left: 15px;
+  box-shadow: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+.caixa-texto-produto {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.caixa-texto-produto p {
+  font-size: 1.5rem;
+  font-family: 'Charm', cursive;
+  width: 22%;
+  text-align: justify;
+}
+
+.texto-cabecalho:hover {
+  cursor: pointer;
+}
+
+.texto-contato {
+  color: #03bb1c;
+}
+
+.caixa-final {
+  margin-block-start: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.texto-final {
+  color: aliceblue;
+  display: flex;
+
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+
+  font-family: 'Charm', cursive;
+}

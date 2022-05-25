@@ -1,0 +1,32 @@
+header {
+  background-color: rgb(23, 76, 79);
+  width: auto;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.logo img {
+  padding-right: 25rem;
+  display: inline;
+  width: 12rem;
+  height: 12rem;
+}
+.texto-titulo-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  float: center;
+
+  padding-top: 2rem;
+  padding-right: 5rem;
+  font-size: 5rem;
+  font-family: 'Marck Script', cursive;
+
+  color: #ffff;
+}
+.texto {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
