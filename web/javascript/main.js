@@ -1,54 +1,29 @@
-// POO: Programação Orionetada a Objetos
-// Atributos e Metodos (Funções)
+const buttonSendMessage = document.getElementsByName('buttonSendMessage')
 
-//Exemplo de atributos: Cor, Tamanho, Largura...
-//Exemplo de Metodos/Funções: Freiar,Acelerar,Virar a Direita
+const message = []
 
-// A converção para a declaração de variável deve ser seguida
-
-// A variável NÃO PODE possuir acentos
-// A variável NÃO PODE iniciar com NÚMEROS
-// A variável NÃO PODE iniciar com CARACTERES ESPECIAIS (*,&,%,...)
-// A variável NÃO PODE iniciar com letra maíscula
-// A variáveis devem possuir um valor semântico (FAZER SENTIDO)
-
-//Funções devem seguir as mesmas convenções e devem ter valor semântico
-
-/*      Exemplos      */
-
-let userName = 'Tchola'
-
-// A Primeira forma de criar uma função é atribuir direto na variavel.
-let somaValores = function () {
-  console.log(userName +' MDS')
-}
-// Summonar a variável 
-userName();
-
-//A Segunda forma de criar uma função Named Function
-function subtraiValores() {
-  console.log('Subtrai')
-}
-
-subtraiValores();
-
-// Terceira forma de cirar uma função
-const carro = {
-  cor: 'Vermelho',
-  andar: function(){
-    console.log('andando')
+function addMessage(event) {
+  event.preventDefault() // desabilita o comportamento padrão do elemento
+  const inputNameValue = document.getElementsByName('name').values
+  const inputEmailValue = document.getElementsByName('email').values
+  const inputMessagesValue = document.getElementsByName('messages').values
+  
+  const message = {
+    name: inputNameValue,
+    email: inputEmailValue,
+    messages: inputMessagesValue
   }
+  
+  console.log(message);
+  message.push('imprimir Array ',message);
+
+  document.getElementById('form-container').reset();
 }
 
+buttonSendMessage.addEventListener('click ', addMessage);
 
-// Por convenção, é possivel declarar Constantes er possuem escopo global em maisculo, somente nesses casos 
-const NUMERO = 100
-
-console.log(carro)
-
-// Quarta forma de criar uma função, Arrow Function
-multiplicaValores = () => {
-console.log('multiplicaValores', multiplicaValores);
+if (message.length < 3  ){
+  message.push(message);
+} else{
+  alert('usando o site')
 }
-
-multiplicaValores()
