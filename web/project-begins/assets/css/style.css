@@ -1,0 +1,84 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+#form-messages {
+  border: 0.1rem solid rgb(124, 123, 124);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: grid;
+  width: 35%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+label {
+  padding-top: 0.95rem;
+}
+.container-title {
+  padding-block-end: 1rem;
+  text-align: center;
+  color: rgb(167, 112, 219);
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+input {
+  border: none;
+  padding: 0.5rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+}
+
+#add-button {
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid rgb(124, 123, 124);
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.2rem;
+  background-color: rgb(164, 73, 250);
+  font-size: 1rem;
+}
+
+#add-button:hover {
+  transition: 1s;
+
+  cursor: pointer;
+  background-color: rgb(184, 141, 224);
+}
+
+ul {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.table-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+th {
+  background-color: rgb(189, 58, 189);
+  color: #fff;
+}
+
+th,
+td {
+  padding-top: 0.5rem;
+  text-align: center;
+  height: 1.5rem;
+  border-top: none;
+  border: 0.1rem solid rgb(135, 49, 192);
+}
+
+.icons-table {
+  text-align: center;
+}
+
+i {
+  margin-left: 0.5rem;
+}

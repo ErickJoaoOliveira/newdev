@@ -1,0 +1,250 @@
+body{
+  background-image: url(https://wallpaperaccess.com/full/1545057.jpg);
+  
+  object-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+header, main, footer {
+  font-family: 'Libre Baskerville', serif;
+  border-width: medium;
+  border-style: solid;
+  border-color: rgb(241, 95, 103);
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+}
+main, footer{
+  border-top: 0px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main-red{
+  color: #d12c2c;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  padding-inline: 5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+}
+
+.list-item{
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #d12c2c;
+  font-weight: 700;
+}
+
+.list-item:hover{
+  color: #910c0c;
+  transition: 0.5s;
+  font-size: 1.5rem;
+}
+
+.main{
+  display: flex;
+}
+
+.main h2{
+  font-weight: bold;
+  font-size: 2.5  rem;
+}
+
+.main-container{
+  display: block;
+  padding: 1rem 1rem;
+}
+
+.main-txt{
+  text-align: justify;
+  padding: 1rem 0 2rem 0;
+}
+
+.main-img{
+  width: 35rem;
+  padding: 1rem ;
+}
+
+h3{
+  font-weight: bold;
+}
+
+.ul-filter-item{
+  padding-top: 0.5rem;
+}
+
+.container-btn{
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+.btn{
+  border: none;
+  background-color: #d12c2c;
+  width: 9rem;
+  height: 3rem;
+
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 1rem 1rem;
+  font-weight: 700;
+}
+
+.btn:hover{
+  background-color: #910c0c;
+  cursor: pointer;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.midia{
+  padding-right: 0.5rem;
+  color: #d12c2c;
+}
+
+.midia:hover{
+  color: #910c0c;
+  cursor: pointer;
+}
+
+/*  SOBRE NÓS */
+
+.main-about{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.main-about p{
+  line-height: 2rem;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+table{
+  margin-top: 5rem;
+}
+
+table thead{
+  text-align: left;
+  font-weight: bold;
+}
+
+tr{
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #d12c2c;
+  padding: 1rem;
+}
+
+/* CONTATO */
+.main-section{
+  display: flex;
+}
+
+.black{
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex ;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: centr;
+}
+
+.container-img{
+  background-image: url(../img/forest.jpg);
+  background-size: 70rem;
+  width: 50%;
+  height: 39rem;
+  
+}
+
+.img-txt{
+  color: #d12c2c;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.container-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.sec-txt{
+  color: #d12c2c;
+}
+
+.main-title{
+  margin: 0rem 1rem 2rem 1rem;
+}
+
+.container-form{
+  width: 50%;
+  margin: auto auto;
+}
+
+.form-title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+form{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  margin: 1rem 0 0.2rem 0;
+}
+
+input{
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.container-form h1{
+  margin-top: 3rem;
+}
+
+.btn-form{
+  margin: 3rem auto;
+}
