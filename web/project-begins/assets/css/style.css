@@ -1,53 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #bb2bff;
+  --bg-color-primary: #bb2bff;
+  font-size: 2.2rem;
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Fira Code', monospace;
 }
 
-#form-messages {
-  border: 0.1rem solid rgb(124, 123, 124);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  display: grid;
-  width: 35%;
-  margin: 0 auto;
-  font-weight: bold;
-}
-
-label {
-  padding-top: 0.95rem;
-}
-.container-title {
-  padding-block-end: 1rem;
+h1,
+h2 {
   text-align: center;
-  color: rgb(167, 112, 219);
+  color: var(--primary-color);
+}
+
+#form-message {
+  display: grid;
+  width: 50%;
   margin: 0 auto;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-top: 1rem;
+  margin-top: 2rem;
 }
 
 input {
-  border: none;
   padding: 0.5rem;
-  border: 0.1rem solid #000;
+  border: 1px solid #ccc;
+}
+
+#addButton {
+  padding: 0.5rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
-}
-
-#add-button {
-  color: rgb(255, 255, 255);
-  border: 0.1rem solid rgb(124, 123, 124);
+  color: #fff;
+  border: none;
   text-transform: uppercase;
-  padding: 0.5rem;
-  margin: 1rem;
-  border-radius: 0.2rem;
-  background-color: rgb(164, 73, 250);
-  font-size: 1rem;
-}
-
-#add-button:hover {
-  transition: 1s;
-
-  cursor: pointer;
-  background-color: rgb(184, 141, 224);
+  background-color: var(--bg-color-primary);
 }
 
 ul {
@@ -56,29 +49,18 @@ ul {
   margin-top: 2rem;
 }
 
-.table-container {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-th {
-  background-color: rgb(189, 58, 189);
-  color: #fff;
+h2 {
+  margin-top: 2rem;
+  text-align: center;
 }
 
+table {
+  margin: 0 auto;
+}
+
+table,
 th,
 td {
-  padding-top: 0.5rem;
-  text-align: center;
-  height: 1.5rem;
-  border-top: none;
-  border: 0.1rem solid rgb(135, 49, 192);
-}
-
-.icons-table {
-  text-align: center;
-}
-
-i {
-  margin-left: 0.5rem;
+  border: 1px solid #ccc;
+  padding-left: 2rem;
 }

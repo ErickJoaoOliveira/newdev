@@ -1,159 +1,176 @@
-const buttonAddMessage = document.getElementById('add-button')
 let countRow = 0
+let lineEditingInMoment = null
+let indexRow
 
-let editId = ''
-let editCheck = false
+function onClickRemove(lineToRemove) {
+  lineToRemove.remove()
+}
 
-const onClickEdit = lineEdit => {
-  // console.log(
-  // lineEdit.childNodes.forEach((valor, index) => {
-  //   console.log(valor)
-  //  console.log(index)
-  // })
-  // )
+function onClickEdit(lineEditing) {
+  lineEditingInMoment = lineEditing
 
-  //Desestruturação de arrays
-  const [from, to, message] = lineEdit.childNodes
-  console.log(from.innerHTML)
-  console.log(to.innerHTML)
-  console.log(message.innerHTML)
-
+  const [from, to, message] = lineEditing.childNodes
   document.getElementById('from').value = from.innerHTML
+
   document.getElementById('to').value = to.innerHTML
-  document.getElementById('message').innerHTML = message.innerHTML
-  const tbody = document.getElementById('table-body')
 
-  editId = lineEdit.id
-  editCheck = true
+  document.getElementById('message').value = message.innerHTML
+}
 
-  const onClickresult = lineEdit => {
-    lineEdit.remove()
+function moveUp(row) {
+  const nodes = document.getElementById('tbody-messages').childNodes
+
+  nodes.forEach((rowItem, index) => {
+    if (rowItem.id === row.id) {
+      indexRow = index - 1
+    }
+  })
+
+  moveLine('up')
+}
+
+function moveDown(row) {
+  const nodes = document.getElementById('tbody-messages').childNodes
+
+  nodes.forEach((rowItem, index) => {
+    if (rowItem.id === row.id) {
+      indexRow = index - 1
+    }
+  })
+
+  moveLine('down')
+}
+
+function moveLine(direction) {
+  const rows = document.getElementById('tbody-messages').rows
+
+  console.log('-> rows', rows)
+  console.log('indexRow', indexRow)
+  console.log('rows[indexRow]', rows[indexRow])
+  const parent = rows[indexRow].parentNode
+
+  if (direction === 'up') {
+    if (indexRow >= 1) {
+      parent.insertBefore(rows[indexRow], rows[indexRow - 1])
+
+      indexRow--
+    }
+  }
+
+  if (direction === 'down') {
+    if (indexRow < rows.length) {
+      if (rows[indexRow + 1]) {
+        parent.insertBefore(rows[indexRow + 1], rows[indexRow])
+        indexRow++
+      }
+    }
   }
 }
 
-function addMessage(event) {
-  event.preventDefault()
-  const inputFrom = document.getElementById('from')
-  const inputTo = document.getElementById('to')
-  const texArea = document.getElementById('message')
+document
+  .getElementById('addButton')
+  .addEventListener('click', function (event) {
+    event.preventDefault()
+    const from = document.getElementById('from').value
+    const to = document.getElementById('to').value
+    const messageValue = document.getElementById('message').value
 
-  if (!inputFrom.value.length) {
-    alert('O DE: deve ser informado')
-    return
-  }
+    if (!to.length) {
+      alert('O remetente deve ser informado')
+      return
+    }
 
-  if (!inputTo.value.length) {
-    alert('O PARA: deve ser informado')
-    return
-  }
+    if (!from.length) {
+      alert('O destinatário deve ser informado')
+      return
+    }
 
-  if (!texArea.value.length) {
-    alert('O TEXTO: deve ser informado')
-    return
-  }
-  const message = {
-    from: inputFrom.value,
-    to: inputTo.value,
-    message: texArea.value
-  }
-  console.log('--> ', message)
+    if (!messageValue.length) {
+      alert('A mensagem deve ser informada')
+      return
+    }
 
-  const sectionMessages = document.getElementById('section-messages')
+    const message = { from, to, message: messageValue }
 
-  //Criamos uma lista não ordenada
+    document.getElementById('form-message').reset()
 
-  //Buscamos uma listanão ordenadadentro da seção, para validar
-  //Se existe ou não, se não existir, criamos uma.
-  let ul = sectionMessages.querySelector('ul')
+    const tbody = document.getElementById('tbody-messages')
 
-  if (!ul) {
-    ul = document.createElement('ul')
+    const tr = document.createElement('tr')
 
-    //adiciona dentro da seção
-    sectionMessages.appendChild(ul)
-  }
-
-  const li = document.createElement('li')
-  li.innerHTML = `De: ${message.from} Para: ${message.to} Mensagem: ${message.message}`
-
-  ul.appendChild(li)
-
-  // Criando um elemento tr para ir para a proxima linha
-  const tr = document.createElement('tr')
-  // Selecionando o elemento tbody que ficara no corpo da tabela
-  const tbody = document.querySelector('tbody')
-
-  //criando variáveis das cedulas
-  const tdFrom = document.createElement('td')
-  const tdTo = document.createElement('td')
-  const tdMessage = document.createElement('td')
-
-  const tdButtons = document.createElement('td')
-
-  const iconEdit = document.createElement('i')
-  iconEdit.setAttribute('class', 'fa solid fa-edit icon-table')
-  iconEdit.setAttribute('style', 'cursor: pointer')
-  iconEdit.setAttribute('title', 'Editar Mensagem')
-  tdButtons.appendChild(iconEdit)
-
-  const iconRemove = document.createElement('i')
-  iconRemove.setAttribute('class', 'fa-solid fa-trash icon-table')
-  iconRemove.setAttribute('style', 'cursor: pointer')
-  iconRemove.setAttribute('title', 'Remover mensagem')
-  tdButtons.appendChild(iconRemove)
-
-  const iconArrouwDown = document.createElement('i')
-  iconArrouwDown.setAttribute('class', 'fa-solid fa-arrow-down')
-  iconArrouwDown.setAttribute('title', 'Descer posição')
-  iconArrouwDown.setAttribute('style', 'cursor: pointer')
-  tdButtons.appendChild(iconArrouwDown)
-
-  const iconArrouwUp = document.createElement('i')
-  iconArrouwUp.setAttribute('class', 'fa-solid fa-arrow-up')
-  iconArrouwUp.setAttribute('style', 'cursor: pointer')
-  iconArrouwUp.setAttribute('title', 'Subir posição')
-  tdButtons.appendChild(iconArrouwUp)
-  //--------------------------------------------------------------//
-
-  /* if (iconRemove) {
-    alert('tem certezaque deseja excluir?')
-  */
-
-  //--------------------------------------------------------------//
-
-  //--------------------------------------------------
-
-  if (editCheck) {
-    const trEdit = document.getElementById(editId)
-
-    trEdit.children[0].innerHTML = message.from
-    trEdit.children[1].innerHTML = message.to
-    trEdit.children[2].innerHTML = message.message
-  } else {
-    //atribuindo um valor para as variáveis
-    tdFrom.innerHTML = `${message.from}`
-    tdTo.innerHTML = `${message.to}`
-    tdMessage.innerHTML = `${message.message}`
+    // primeira coluna
+    const tdFrom = document.createElement('td')
+    tdFrom.innerHTML = message.from
+    // segunda coluna
+    const tdTo = document.createElement('td')
+    tdTo.innerHTML = message.to
+    // terceira coluna
+    const tdMessage = document.createElement('td')
+    tdMessage.innerHTML = message.message
 
     tr.appendChild(tdFrom)
     tr.appendChild(tdTo)
     tr.appendChild(tdMessage)
+
+    const tdButtons = document.createElement('td')
+    const iconEdit = document.createElement('i')
+    iconEdit.setAttribute('class', 'fas fa-edit')
+    iconEdit.setAttribute('title', 'Editar')
+    iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+    tdButtons.appendChild(iconEdit)
+
+    const iconRemove = document.createElement('i')
+    iconRemove.setAttribute('class', 'fas fa-trash')
+    iconRemove.setAttribute('title', 'Remover')
+    iconRemove.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+    tdButtons.appendChild(iconRemove)
+
+    const iconArrowDown = document.createElement('i')
+    iconArrowDown.setAttribute('class', 'fas fa-arrow-down')
+    iconArrowDown.setAttribute('title', 'Mover abaixo')
+    iconArrowDown.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+    tdButtons.appendChild(iconArrowDown)
+
+    const iconArrowUp = document.createElement('i')
+    iconArrowUp.setAttribute('class', 'fas fa-arrow-up')
+    iconArrowUp.setAttribute('title', 'Mover acima')
+    iconArrowUp.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+    tdButtons.appendChild(iconArrowUp)
+
     tr.appendChild(tdButtons)
 
+    // Precisamos IDENTIFICAR a linha
     tr.setAttribute('id', `line${countRow}`)
     countRow += 1
 
-    tbody.appendChild(tr)
-
-    iconEdit.setAttribute('onclick', `onClickEdit(${tdButtons.parentNode.id});`)
+    iconEdit.setAttribute(
+      'onclick',
+      `onClickEdit(${tdButtons.parentElement.id});`
+    )
     iconRemove.setAttribute(
       'onclick',
-      `onClickRemove(${tdButtons.parentNode.id});`
+      `onClickRemove(${tdButtons.parentElement.id});`
     )
-  }
 
-  //--------------------------------------------------
+    iconArrowUp.setAttribute(
+      'onclick',
+      `moveUp(${tdButtons.parentElement.id});`
+    )
+    iconArrowDown.setAttribute(
+      'onclick',
+      `moveDown(${tdButtons.parentElement.id});`
+    )
 
-  document.getElementById('form-messages').reset()
-}
-buttonAddMessage.addEventListener('click', addMessage)
+    if (lineEditingInMoment) {
+      const [fromToUpdate, toToUpdate, messageToUpdate] =
+        lineEditingInMoment.childNodes
+
+      fromToUpdate.innerHTML = message.from
+      toToUpdate.innerHTML = message.to
+      messageToUpdate.innerHTML = message.message
+
+      lineEditingInMoment = null
+    } else {
+      tbody.appendChild(tr)
+    }
+  })
