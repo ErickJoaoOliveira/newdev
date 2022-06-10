@@ -3,10 +3,10 @@ let userInfo = []
 
 window.onload = () => {
   let userKey = localStorage.getItem('userInfo')
-  userInfo = userKey ? JSON.parse(userInfo) : []
+  userInfo = userKey ? JSON.parse(userKey) : []
 
   if (localStorage.getItem('userInfo')) {
-    document.getElementById('anchor-txt').style.display = "flex"
+    document.getElementById('anchor-txt').style.display = 'flex'
   }
 }
 
@@ -47,12 +47,9 @@ window.onclick = function (event) {
   }
 }
 
-document.getElementById('iconRemove').onclick = function () {
-  modal.style.display = 'none'
-}
-
 function addTables(storage) {
-  const table = document.createElement('table')
+  console.log('gay')
+  const table = document.querySelector('table')
   let tbody = document.querySelector('tbody')
   if (tbody) {
     tbody.remove()
@@ -70,8 +67,8 @@ function addTables(storage) {
 
     tdEmail.innerHTML = `${item.email}`
     tdCity.innerHTML = `${item.city}`
-    tdFirstName.innerHTML = `${item.firstName}`
-    tdLastname.innerHTML = `${item.lastName}`
+    tdFirstName.innerHTML = `${item.firstname}`
+    tdLastname.innerHTML = `${item.lastname}`
     tdComplement.innerHTML = `${item.complement}`
     tdNumber.innerHTML = `${item.number}`
 

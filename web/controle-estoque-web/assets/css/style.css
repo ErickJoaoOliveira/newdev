@@ -1,0 +1,86 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #7A00BF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23620099' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23490073' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2331004c' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23180026' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23000000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+.header {
+  margin: 0 auto;
+  width: 80%;
+
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  width: 21%;
+}
+
+.main {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-top: 2%;
+  
+}
+
+h1{
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 2rem;
+  padding-block-end: 4%;
+  font-weight: bold;
+}
+
+form {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 40%;
+  background-color: #fdfdfd;
+  align-items: center;
+  height: 50vh;
+  
+}
+
+.form-horizontal {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  padding: 1rem;
+}
+
+input {
+  width: 90%;
+  height: 1.90rem;
+}
+button {
+  width: 70%;
+  border: none;
+  font-weight: bold;
+ 
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  
+  height: 2.5rem;
+  background-color: rgb(180, 19, 19);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(160, 4, 4);
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+}
