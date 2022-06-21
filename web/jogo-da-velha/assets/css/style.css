@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap');
+body {
+  font-family: 'Overlock', cursive;
+}
+.oldWomanGame {
+  padding-left: 7%;
+  align-items: center;
+  display: flex;
+  margin: 12% auto;
+  width: 40%;
+  height: 40%;
+  flex-wrap: wrap;
+}
+
+.grid-area1{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area2{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area3{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area4{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area5{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area6{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area7{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area8{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}
+.grid-area9{
+  border: 2px solid rgb(0, 0, 0);
+  width: 10vw;
+  height: 14vh;
+  background-color: aqua;
+}

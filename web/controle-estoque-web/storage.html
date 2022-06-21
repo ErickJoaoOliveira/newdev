@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>GF | Motors</title>
+</head>
+<body class="body-form">
+  <header class="header-form">
+    <div class="header-logo">
+      <img class="logo-img" src="./assets/img/logo-auto.png" alt="Logo da empresa 'MobiAuto'">
+    </div>
+    <div class="txt-container">
+      <p><a href="./home.html">Home</a></p>
+      <p><a href="./index.html">Cadastrar</a></p>
+      <p><a href="./storage.html">Estoque</a></p>
+    </div>
+  </header>
+  <main>
+    <div class="search-box ">
+      <input id="inputFilter" class="search-text" placeholder="Pesquisar..." type="text">
+      <div class="positionbutton">
+        <button class="filterbutton" id="" type="submit">Pesquisar</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <th>Modelo</th>
+        <th>Marca</th>
+        <th>Ano</th>
+        <th>Estoque</th>
+        <th>Ações</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div class="storage-container">
+      <p>Total de </p>
+      <span id="storageSpan"></span>
+      <p>em estoque</p>
+      <p>by matheus oliveira</p>
+    </div>
+    <section id="myModal" class="modal">
+      <div id="modalContent" class="modal-content">
+        <div action="#" id="modalDiv">
+        </div>
+        <form class="modalForm" action="">
+          <label for="addMove">Insira a quantidade que vai ser adicionada a loja:</label>
+          <input class="addCarInput" id="addInput" type="number">
+          <button class="modalButton" id="addMoveBtn" type="submit">Adicionar</button>
+          <i class="fa-solid fa-circle-xmark icon" id="iconRemove"></i>
+        </form>
+      </div>
+    </section>
+    <section id="myModal2" class="modal">
+      <div id="modalContent2" class="modal-content">
+        <div action="#" id="modalDiv2">
+        </div>
+        <form class="modalForm" action="">
+          <label for="removeStorage">Insira a quantidade que quer remover:</label>
+          <input class="removeCarInput" id="removeInput" type="number">
+          <button class="modalButton" id="removeStorageBtn" type="submit">Retirar</button>
+          <i class="fa-solid fa-circle-xmark icon" id="iconRemove"></i>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script-storage.js"></script>
+  <script src="https://kit.fontawesome.com/74db4fc3d9.js" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
