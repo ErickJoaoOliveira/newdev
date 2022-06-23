@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,500&display=swap');
 
 body{
+  background: linear-gradient(#07dd96,#07caaa,#09a389);
+  background-repeat: no-repeat;
   font-family: 'Mali', cursive;
   font-size: 8rem;
+  background-color: #09a389;
 }
 
 .char-select{
@@ -23,10 +26,10 @@ body{
 }
 
 .game-container{
-  margin: 5% auto;
+  margin: 15% auto;
   height: 27rem;
   width: 27rem;
-  background-color: cadetblue;
+  background-color: rgb(236, 236, 236);
   display: flex;  
   flex-wrap: wrap;
 }

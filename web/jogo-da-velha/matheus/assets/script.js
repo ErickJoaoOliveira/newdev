@@ -21,11 +21,15 @@ playerArea.addEventListener('click', (event) => {
 
 gameArea.addEventListener('click', (event) => {
   if(check%2 == 0){
-    event.target.innerHTML = player1;
-  }else{
+    if(event.target.innerHTML == ''){
+      event.target.innerHTML = player1;
+      check++;
+    }
+
+  }if (event.target.innerHTML == ''){
     event.target.innerHTML = player2;
+    check++;
   }
-  check++;
   checkWin();
 })
 
@@ -36,9 +40,11 @@ function checkWin() {
     if(gameArea.children[i].innerHTML == player1 && gameArea.children[i+1].innerHTML == player1 && 
       gameArea.children[i+2].innerHTML == player1){
       alert("Player 1 Win!");
+      stop();
     }else if(gameArea.children[i].innerHTML == player2 && gameArea.children[i+1].innerHTML == player2 && 
       gameArea.children[i+2].innerHTML == player2){
       alert("Player 2 Win!");
+      stop();
     }
   }
 
@@ -47,9 +53,11 @@ function checkWin() {
       if(gameArea.children[i].innerHTML == player1 && gameArea.children[i+3].innerHTML == player1 && 
         gameArea.children[i+6].innerHTML == player1){
         alert("Player 1 Win!");
+        stop();
       }else if(gameArea.children[i].innerHTML == player2 && gameArea.children[i+3].innerHTML == player2 && 
         gameArea.children[i+6].innerHTML == player2){
         alert("Player 2 Win!");
+        stop();
       }
     }
 
@@ -57,22 +65,30 @@ function checkWin() {
       if(gameArea.children[0].innerHTML == player1 && gameArea.children[0+4].innerHTML == player1 && 
         gameArea.children[0+8].innerHTML == player1){
           alert("Player 1 Win!");
+          stop();
       }else if(gameArea.children[0+2].innerHTML == player1 && gameArea.children[0+4].innerHTML == player1 && 
         gameArea.children[0+6].innerHTML == player1){
           alert("Player 1 Win!");
+          stop();
       }
 
     // Verificação de vitória Diagonal para o P2
     if(gameArea.children[0].innerHTML == player2 && gameArea.children[0+4].innerHTML == player2 && 
       gameArea.children[0+8].innerHTML == player2){
         alert("Player 2 Win!");
+        stop();
     }else if(gameArea.children[0+2].innerHTML == player2 && gameArea.children[0+4].innerHTML == player2 && 
       gameArea.children[0+6].innerHTML == player2){
         alert("Player 2 Win!");
+        stop();
     }
       
     console.log(gameArea.childNodes.innerHTML);
     if (gameArea.childNodes.innerHTML != null) {
       
     }
+    if(check == 9 ){
+      alert("Véia")
+    }
+ 
 }
