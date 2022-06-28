@@ -110,8 +110,8 @@ function excluir(idTarefa) {
 }
 
 function check(idTarefa) {
-    let confirmacao = window.confirm('Você concluiu ela ? ');
-    if(confirmacao) {
+    let checkWin = window.confirm('Você concluiu ela ? ');
+    if(checkWin) {
         let li = document.getElementById(''+ idTarefa + '');
         if(li) {
             listaTarefas.removeChild(li);
