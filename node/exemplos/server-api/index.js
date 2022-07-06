@@ -12,12 +12,12 @@ const getUsers = (request, response) => {
     'Access-Control-Allow-Origin': ['*']
   });
 
-  if (!name){
-    response.writeHead(400, {
-      'Access-Control-Allow-Origin': '*'
-    });
-    return response.end('Não foi retornado o nome');
-  }
+  // if (!name){
+  //   response.writeHead(400, {
+  //     'Access-Control-Allow-Origin': '*'
+  //   });
+  //   return response.end('Não foi retornado o nome');
+  // }
 
   if (name) {    
     const user = {

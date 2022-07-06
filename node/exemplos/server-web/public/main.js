@@ -9,3 +9,14 @@ const loadData = async () => {
 }
 
 loadData()
+
+fetch('http://localhost:5064')
+.then((response) => {
+  console.log('isso deu certo ', response);
+})
+.catch((error) => {
+  console.log('Isso deu pau ', error);
+})
+.finally(() => {
+  console.log('Requisição finalizou');
+})
