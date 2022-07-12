@@ -1,12 +1,27 @@
-exports.findAll = (req, res) => {
-  const query = req.query;
-  console.log('Query String authors', query);
-  return res.status(200).send('Acessando recursos /authors METHOD: GET');
+const database = require('../databases/knex')
+
+exports.findAll = async (req, res) => {
+  try {
+    const sql = await database.select('*').from('authors');
+
+    return res.status(200).send({
+      authors: sql
+    });
+  } catch (error) {
+    return res.status(500).send({error: error?.message || e});
+  }
 };
 
 exports.create = (req, res) => {
-  console.log('Recebendo dados', req.body);
-  return res.status(200).send('Acessando recursos /authors METHOD: POST');
+  try {
+    await database('authors').insert(req.body);
+
+    return res.status(200).send({
+      status: 'sucess'
+    });
+  } catch (error) {
+    return res.status(500).send({error: error?.message || e});
+  }
 };
 
 exports.getById = (req, res) => {

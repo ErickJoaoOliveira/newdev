@@ -6,7 +6,7 @@ const AuthorController = require('./controllers/AuthorController');
 const BookController = require('./controllers/BookController');
 
 // Routes Index
-// Cria as rotas que será exibida de acordo com seu método 
+// Cria as rotas que serão exibidas de acordo com seu método 
 routes.get('/', IndexController.index);
 
 // Route Authors
