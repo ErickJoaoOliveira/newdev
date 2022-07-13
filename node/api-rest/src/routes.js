@@ -17,13 +17,14 @@ routes.post('/authors', AuthorController.create);
 routes.get('/authors/:id', AuthorController.getById);
 routes.delete('/authors/:id', AuthorController.deleteById);
 routes.put('/authors/:id', AuthorController.put);
-routes.patch('/authors/:id', AuthorController.patch);
 
 // Route Books
-routes.get('/books', BookController.get);
-routes.post('/books', BookController.post);
-routes.delete('/books', BookController.delete);
-routes.put('/books', BookController.put);
-routes.patch('/books', BookController.patch);
+routes.get('/books', BookController.findAll)
+routes.get('/books', BookController.create)
+routes.get('/books/:id', BookController.get);
+routes.post('/books/:id', BookController.post);
+routes.delete('/books/:id', BookController.delete);
+routes.put('/books/:id', BookController.put);
+// routes.patch('/books', BookController.patch);
 
 module.exports = routes;

@@ -1,5 +1,6 @@
+const {response, request } = require('express');
 const database = require('../databases/knex')
-
+const logger = require('../utils/logger')
 exports.findAll = async (req, res) => {
   try {
     const sql = await database.select('*').from('authors');
@@ -8,11 +9,12 @@ exports.findAll = async (req, res) => {
       authors: sql
     });
   } catch (error) {
+    log(error);
     return res.status(500).send({error: error?.message || e});
   }
 };
 
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
   try {
     await database('authors').insert(req.body);
 
@@ -20,30 +22,67 @@ exports.create = (req, res) => {
       status: 'sucess'
     });
   } catch (error) {
+    log(error);
     return res.status(500).send({error: error?.message || e});
   }
 };
 
-exports.getById = (req, res) => {
-  const params = req.params;
-  console.log('Query String authors', params);
+exports.getById = async (req, res) => {
+  try {
+    const params = req.params;
+    const [author] = await database.select('*').from('authors').where({id: params.id}).limit(1);
   return res.status(200).send(`Acessando recursos /authors METHOD: GET BY ID ${params.id}`);
+
+  } catch (error) {
+    log(error);
+    return res.status(500).send({error: error?.message || e})
+  }
+
+
 };
 
-exports.deleteById = (req, res) => {
-  const params = req.params;
-  console.log('Query String authors', params);
+exports.deleteById = async (req, res) => {
+  try {
+    const params = req.params;
+    const [previousAuthor] = await database.select('*').from('authors').where({id: params.id}).limit(1);
+
+  if(!author){
+    log(error);
+    return res.status(404).send(`O registro com o id ${params.id} não foi encontrado`);
+  }
+  
+  const nextAuthor = req.body;
+  await database.delete({name: nextAuthor.name}).from('authors').where({id: previousAuthor.id});
   return res.status(200).send(`Acessando recursos /authors METHOD: DELETE BY ID ${params.id}`);
+  } catch (error) {
+    log(error);
+    return res.status(500).send({error: error?.message || e})
+  }
 };
 
-exports.put = (req, res) => {
-  const params = req.params;
-  console.log('Query String authors', params);
-  return res.status(200).send(`Acessando recursos /authors METHOD: PUT BY ID ${params.id}`);
-};
+exports.put = async (req, res) => {
+  try {
+    const params = req.params;
+    const [previousAuthor] = await database.select('*').from('authors').where({id: params.id}).limit(1);
+    // Precisamos buscar no banco de dados o possivel registro
+    // Se não existir, é preciso informar ao cliente que não foi encontrado
+    // Capturar o valor do body no qual o cliente quer atualizar e modificar a informação
+    // Avisar ao cliente que encontramos o registro e retornar o registro atualizado
+    
+    if(!author){
+      log(error);
+      return res.status(404).send(`O registro com id ${params.id} não foi encontrado`);
+    }
+    
+    const nextAuthor = request.body
+    console.log('authors UPDATE', nextAuthor);
+    console.log('authors ENCONTRADO', previousAuthor);
+    await database.update({name: nextAuthor.name}).from('authors').where({id: previousAuthor.id});
 
-exports.patch = (req, res) => {
-  const params = req.params;
-  console.log('Query String authors', params);
-  return res.status(200).send(`Acessando recursos /authors METHOD: PATCH BY ID ${params.id}`);
+    return res.status(200).send({status: 'Registro atualizado com sucesso', data: nextAuthor});
+
+  } catch (error) {
+    log(error);
+    res.status(500).send({error: error?.message || e});
+  }
 };
