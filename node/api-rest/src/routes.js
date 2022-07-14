@@ -19,10 +19,10 @@ routes.delete('/authors/:id', AuthorController.deleteById);
 routes.put('/authors/:id', AuthorController.put);
 
 // Route Books
-routes.get('/books', BookController.findAll)
-routes.get('/books', BookController.create)
-routes.get('/books/:id', BookController.get);
-routes.post('/books/:id', BookController.post);
+routes.get('/books', BookController.get);
+routes.post('/books', BookController.post)
+
+routes.get('/books/:id', BookController.getId);
 routes.delete('/books/:id', BookController.delete);
 routes.put('/books/:id', BookController.put);
 // routes.patch('/books', BookController.patch);

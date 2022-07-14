@@ -9,7 +9,7 @@ exports.findAll = async (req, res) => {
       authors: sql
     });
   } catch (error) {
-    log(error);
+    logger(error);
     return res.status(500).send({error: error?.message || e});
   }
 };
@@ -22,7 +22,7 @@ exports.create = async (req, res) => {
       status: 'sucess'
     });
   } catch (error) {
-    log(error);
+    logger(error.message);
     return res.status(500).send({error: error?.message || e});
   }
 };
@@ -34,7 +34,7 @@ exports.getById = async (req, res) => {
   return res.status(200).send(`Acessando recursos /authors METHOD: GET BY ID ${params.id}`);
 
   } catch (error) {
-    log(error);
+    logger(error);
     return res.status(500).send({error: error?.message || e})
   }
 
@@ -47,7 +47,7 @@ exports.deleteById = async (req, res) => {
     const [previousAuthor] = await database.select('*').from('authors').where({id: params.id}).limit(1);
 
   if(!author){
-    log(error);
+    logger(error);
     return res.status(404).send(`O registro com o id ${params.id} não foi encontrado`);
   }
   
@@ -55,7 +55,7 @@ exports.deleteById = async (req, res) => {
   await database.delete({name: nextAuthor.name}).from('authors').where({id: previousAuthor.id});
   return res.status(200).send(`Acessando recursos /authors METHOD: DELETE BY ID ${params.id}`);
   } catch (error) {
-    log(error);
+    logger(error);
     return res.status(500).send({error: error?.message || e})
   }
 };
@@ -70,7 +70,7 @@ exports.put = async (req, res) => {
     // Avisar ao cliente que encontramos o registro e retornar o registro atualizado
     
     if(!author){
-      log(error);
+      logger(error);
       return res.status(404).send(`O registro com id ${params.id} não foi encontrado`);
     }
     
@@ -82,7 +82,7 @@ exports.put = async (req, res) => {
     return res.status(200).send({status: 'Registro atualizado com sucesso', data: nextAuthor});
 
   } catch (error) {
-    log(error);
+    logger(error);
     res.status(500).send({error: error?.message || e});
   }
 };
