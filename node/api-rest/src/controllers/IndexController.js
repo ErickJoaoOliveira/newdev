@@ -1,4 +1,4 @@
-exports.index = (req, res) => {
+exports.index = (request, response) => {
   console.log('API is available');
-  return res.status(200).send('API is available');
+  return response.status(200).send('API is available');
 }

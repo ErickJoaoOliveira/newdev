@@ -5,11 +5,11 @@ const routes = require('./routes');
 
 const app = express();
 
-const PORT = 3005;
+const PORT = 3095;
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
+// app.use(cors());
+// app.use(express.json());
+// app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`API is listening on port ${PORT} `)
