@@ -3,16 +3,17 @@
  * @returns { Promise<void> }
  */
  exports.up = function(knex) {
-  return knex.schema.createTable('controller', function (table) {
+  return knex.schema.createTable('professors', function (table) {
     table.increments();
-    table.string('fullName');
-    table.string('avatarUrl');
+    table.string('name');
+    table.string('urlAvatar');
   })
 };
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  return knex.schema.dropTable('controller');
+  return knex.schema.dropTable('professors');
 };

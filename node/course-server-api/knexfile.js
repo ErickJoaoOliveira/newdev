@@ -2,23 +2,20 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: 'dev.sqlite3'
+      filename: 'data.sqlite3'
     },
-    pool: {
-      afterCreate: function (connection, cb) {
-        console.log('executando after create database')
+    pool:{
+      afterCreate: function(connection, cb){
+        console.log('compiling after create database');
         connection.run('PRAGMA foreign_keys = ON', cb);
       }
     },
     useNullAsDefault: true,
-    migrations: {
+    migrations:{
       directory: __dirname + '/src/databases/migrations'
     },
-    seeds: {
+    seeds:{
       directory: __dirname + '/src/databases/seeds'
     }
-  },
-  production: {
-    
   }
 }
