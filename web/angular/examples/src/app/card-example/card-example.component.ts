@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-example',
@@ -11,6 +11,8 @@ export class CardExampleComponent implements OnInit {
   @Input() links: string[] = [''];
   @Input() bio: string = '';
   @Input() subtitle: string = '';
+
+  color: string = '#000'
   constructor() { }
 
   ngOnInit(): void {
