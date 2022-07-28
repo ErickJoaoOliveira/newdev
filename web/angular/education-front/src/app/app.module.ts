@@ -9,6 +9,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RoomComponent } from './components/room/room.component';
 import { LessonComponent } from './components/lesson/lesson.component';
+import { VimeModule } from '@vime/angular';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { LessonComponent } from './components/lesson/lesson.component';
     LogoComponent,
     SidebarComponent,
     RoomComponent,
-    LessonComponent
+    LessonComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    VimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
