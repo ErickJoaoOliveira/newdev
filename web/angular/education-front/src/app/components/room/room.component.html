@@ -1,24 +1,45 @@
 <div class="d-flex flex-grow-1">
-  <div class="d-flex justify-center">
-    <div class="container-video h-100 w-100">
-    
-    <!-- By default there are no controls so let's turn them on. -->
-<vm-player controls>
-  <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
-    <!-- These are passed directly to the underlying HTML5 `<video>` element. -->
-    <!-- Why `data-src`? Lazy loading, you can always use `src` if you prefer.  -->
-    <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
-    <track
-      default
-      kind="subtitles"
-      src="https://media.vimejs.com/subs/english.vtt"
-      srclang="en"
-      label="English"
-    />
-  </vm-video>
+  <div class="d-flex justify-center flex-column">
+    <div class="container-video h-100 w-10">
+      <vm-player controls>
+        <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
+          <!-- These are passed directly to the underlying HTML5 `<video>` element. -->
+          <!-- Why `data-src`? Lazy loading, you can always use `src` if you prefer.  -->
+          <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
+          <track
+            default
+            kind="subtitles"
+            src="https://media.vimejs.com/subs/english.vtt"
+            srclang="en"
+            label="English"
+          />
+        </vm-video>
 
-  <!-- ... -->
-</vm-player>
+        <!-- ... -->
+      </vm-player>
+
+      <div class="p-4 mx-auto ">
+          <section class="d-flex justify-content-start gap-4">
+            <div class="flex-grow-1">
+              <h1>lógica de Programação</h1>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil magni cupiditate quod repellat, quam, ipsam explicabo officia dolor veritatis ut quasi? Mollitia, eveniet in. Possimus maiores error porro odio!</p>
+
+              <div class="d-flex align-items-center gap-2 mt-3">
+                <img class="rounded-5 border" src="https://avatars.githubusercontent.com/u/104533235?v=4" alt="" width="56" height="56">
+                <div class="">
+                  <strong class="d-block">
+                    Erick
+                  </strong>
+                  <span class="d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et numquam hic quae accusamus, odio deleniti quaerat ullam voluptatibus repudiandae distinctio corrupti at quod tempore autem nemo, omnis laborum dolores natus.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+
+          </section>
+      </div>
     </div>
   </div>
 </div>
