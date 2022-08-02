@@ -1,45 +1,50 @@
-<div class="d-flex flex-grow-1">
-  <div class="d-flex justify-center flex-column">
-    <div class="container-video h-100 w-10">
+<div class="flex-grow-1">
+  <div class="d-flex justify-content center">
+    <div class="h-100 w-100 container-video">
       <vm-player controls>
         <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
-          <!-- These are passed directly to the underlying HTML5 `<video>` element. -->
-          <!-- Why `data-src`? Lazy loading, you can always use `src` if you prefer.  -->
           <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
           <track
-            default
-            kind="subtitles"
-            src="https://media.vimejs.com/subs/english.vtt"
-            srclang="en"
-            label="English"
+          default
+          kind="subtitles"
+          src="https://media.vimejs.com/subs/english.vtt"
+          srclang="en"
+          label="English"
           />
         </vm-video>
-
-        <!-- ... -->
       </vm-player>
-
-      <div class="p-4 mx-auto ">
-          <section class="d-flex justify-content-start gap-4">
-            <div class="flex-grow-1">
-              <h1>lógica de Programação</h1>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil magni cupiditate quod repellat, quam, ipsam explicabo officia dolor veritatis ut quasi? Mollitia, eveniet in. Possimus maiores error porro odio!</p>
-
-              <div class="d-flex align-items-center gap-2 mt-3">
-                <img class="rounded-5 border" src="https://avatars.githubusercontent.com/u/104533235?v=4" alt="" width="56" height="56">
-                <div class="">
-                  <strong class="d-block">
-                    Erick
-                  </strong>
-                  <span class="d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et numquam hic quae accusamus, odio deleniti quaerat ullam voluptatibus repudiandae distinctio corrupti at quod tempore autem nemo, omnis laborum dolores natus.</span>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section>
-
-          </section>
-      </div>
     </div>
+  </div>
+
+  <div class="p-4 mx-auto">
+    <section class="d-flex aligm-item-center justify-content-between">
+      <div class="flex-1">
+        <h1 class="text-2xl font-bold">
+          Título da aula
+        </h1>
+
+        <p class="mt-4 text-gray-200 leading-relaxed">
+          Descrição da aula!
+        </p>
+
+        <div class="d-flex aligm-item-center gap-2 mt-3">
+          <img
+            height="50"
+            width="50"
+            class="rounded-5 border"
+            src="https://avatars.githubusercontent.com/u/104533235?v=4"
+            alt=""
+          />
+
+          <div class="leading-relaxed">
+            <strong class="font-bold text-2xl d-block">Erick</strong>
+            <span class="text-gray-200 text-sm d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam aperiam totam ea eveniet voluptatibus iure est earum eum minima ipsum odio tempora quibusdam voluptas modi, animi quis nemo cupiditate?</span>
+          </div>
+
+        </div>
+      </div>
+
+      
+    </section>
   </div>
 </div>
