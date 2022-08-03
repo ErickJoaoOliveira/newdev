@@ -11,7 +11,7 @@ import { CourseResponseType, CourseService } from 'src/app/course.service';
 export class CourseComponent implements OnInit {
   courseService: CourseService;
   course: CourseResponseType;
-
+  lessonToShow: any;
   constructor(courseService: CourseService) { 
     this.courseService = courseService;
     this.course = {} as CourseResponseType;
@@ -22,4 +22,8 @@ async ngOnInit(): Promise<void> {
    
   }
 
+  async setLessonToShow(lesson: any) {
+    console.log(lesson);
+    this.lessonToShow = lesson;
+  }
 }

@@ -1,3 +1,13 @@
 main {
   flex: 1 1 0%;
 }
+
+.container-welcome {
+  width: 80%;
+}
+.title {
+  text-align: center;
+}
+.img-welcome{
+  width: 70vw;
+}

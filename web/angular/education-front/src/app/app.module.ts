@@ -10,6 +10,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RoomComponent } from './components/room/room.component';
 import { LessonComponent } from './components/lesson/lesson.component';
 import { VimeModule } from '@vime/angular';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { VimeModule } from '@vime/angular';
     SidebarComponent,
     RoomComponent,
     LessonComponent,
+    VideoPlayerComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LessonType } from 'src/app/course.service';
 import { LessonResponseType, LessonService } from 'src/app/lesson.service';
 
@@ -7,20 +7,23 @@ import { LessonResponseType, LessonService } from 'src/app/lesson.service';
   templateUrl: './lesson.component.html',
   styleUrls: ['./lesson.component.css']
 })
+
 export class LessonComponent implements OnInit {
+  @Output() getLessonEvent: EventEmitter<any> = new EventEmitter();
   @Input() lessonId?: number;
   @Input() title?: string;
 
   lessonService: LessonService;
-  Lesson: LessonResponseType;
+  lesson: LessonResponseType;
 
   constructor(lessonService: LessonService) { 
     this.lessonService = lessonService;
-    this.Lesson = {} as LessonResponseType;
+    this.lesson = {} as LessonResponseType;
   }
 
-  onClickLesson (id: any) {
-    this.lessonService.getLessonById(id)
+ async onClickLesson (id: any) {
+  this.lesson = await this.lessonService.getLessonById(id)
+    this.getLessonEvent.emit(this.lesson);
   }
 
   ngOnInit(): void {

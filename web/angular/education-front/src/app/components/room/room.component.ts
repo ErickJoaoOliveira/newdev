@@ -7,8 +7,7 @@ import { LessonType } from 'src/app/course.service';
   styleUrls: ['./room.component.css']
 })
 export class RoomComponent implements OnInit {
-  
-
+  @Input() lessonParam: any;
   constructor() { 
 
   }

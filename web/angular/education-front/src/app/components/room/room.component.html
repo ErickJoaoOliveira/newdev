@@ -1,18 +1,8 @@
-<div class="flex-grow-1">
+<div  class="flex-grow-1">
   <div class="d-flex justify-content center">
     <div class="h-100 w-100 container-video">
-      <vm-player controls>
-        <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
-          <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
-          <track
-          default
-          kind="subtitles"
-          src="https://media.vimejs.com/subs/english.vtt"
-          srclang="en"
-          label="English"
-          />
-        </vm-video>
-      </vm-player>
+      <vm-youtube cookies="true" videoId="{{lessonParam?.videoId}}">
+      </vm-youtube>
     </div>
   </div>
 
@@ -20,11 +10,12 @@
     <section class="d-flex aligm-item-center justify-content-between">
       <div class="flex-1">
         <h1 class="text-2xl font-bold">
-          Título da aula
+          
+          {{lessonParam?.title}}
         </h1>
 
         <p class="mt-4 text-gray-200 leading-relaxed">
-          Descrição da aula!
+          {{lessonParam?.description}}
         </p>
 
         <div class="d-flex aligm-item-center gap-2 mt-3">
@@ -32,12 +23,12 @@
             height="50"
             width="50"
             class="rounded-5 border"
-            src="https://avatars.githubusercontent.com/u/104533235?v=4"
+            src="{{lessonParam?.title.instructor.avatarUrl}}"
             alt=""
           />
 
           <div class="leading-relaxed">
-            <strong class="font-bold text-2xl d-block">Erick</strong>
+            <strong class="font-bold text-2xl d-block">{{lessonParam?.instructor.fullName}}</strong>
             <span class="text-gray-200 text-sm d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam aperiam totam ea eveniet voluptatibus iure est earum eum minima ipsum odio tempora quibusdam voluptas modi, animi quis nemo cupiditate?</span>
           </div>
 
@@ -48,3 +39,5 @@
     </section>
   </div>
 </div>
+
+

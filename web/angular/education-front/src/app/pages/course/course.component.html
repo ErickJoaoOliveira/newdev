@@ -3,8 +3,15 @@
 
   <main class="d-flex ">
 
-    <app-room  class="flex-grow-1"></app-room>
-    <app-sidebar [lessons]="course.lessons" ></app-sidebar>
+    <app-room *ngIf="lessonToShow; else errorScreen" [lessonParam]="lessonToShow" class="flex-grow-1"></app-room>
+    <app-sidebar (populateLessonEvent)="setLessonToShow($event)" [lessons]="course.lessons" ></app-sidebar>
 
+    <ng-template #errorScreen>
+      <div class="container-welcome">
+
+        <h1 class="title">Bem vindo ao curso</h1>
+      <img class="img-welcome" src="https://static.todamateria.com.br/upload/be/mv/bem-vindo-benvindo-og.jpg" alt="">
+      </div>
+    </ng-template>
   </main>
 </div>

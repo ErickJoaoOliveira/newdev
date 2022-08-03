@@ -21,11 +21,11 @@ export class LessonService {
 
   constructor() { }
 
-  async getLessonById(id: number): Promise<LessonResponseType>{
-   const response = await fetch(`http://localhost:4000/lessons/${id}`)
+  async getLessonById(id: number): Promise<LessonResponseType> {
+    const response = await fetch(`https://eo-newdev.herokuapp.com/lessons/${id}`)
 
-   const data = await response.json()
-   return data
+    const data = await response.json()
+    return data
   }
- 
+
 }

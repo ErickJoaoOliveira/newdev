@@ -17,7 +17,6 @@ export type CourseResponseType = {
   providedIn: 'root'
 })
 
-
 export class CourseService {
 
   constructor() {
@@ -25,10 +24,19 @@ export class CourseService {
   }
   async getCourseById(id: number): Promise<CourseResponseType> {
     const response = await
-      fetch(`http://localhost:4000/courses/${id}`)
+      fetch(`https://eo-newdev.herokuapp.com/courses/${id}`)
 
     const data = await response.json()
 
     return data;
+  }
+
+  async getCourse(){
+    const response = await
+    fetch('https://eo-newdev.herokuapp.com/courses')
+
+    const data = await response.json()
+
+    return data
   }
 }
