@@ -28,4 +28,11 @@ export class LessonService {
     return data
   }
 
+  async getLesson(): Promise<LessonResponseType> {
+    const response = await fetch(`http://eo-newdev.herokuapp.com/lessons`)
+
+    const data = await response.json()
+    return data
+  }
+
 }

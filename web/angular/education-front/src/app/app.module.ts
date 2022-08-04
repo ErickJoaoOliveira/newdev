@@ -12,6 +12,7 @@ import { LessonComponent } from './components/lesson/lesson.component';
 import { VimeModule } from '@vime/angular';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
     LessonComponent,
     VideoPlayerComponent,
     HomeComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

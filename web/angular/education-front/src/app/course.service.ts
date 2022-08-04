@@ -31,7 +31,7 @@ export class CourseService {
     return data;
   }
 
-  async getCourse(){
+  async getCourse(): Promise<CourseResponseType>{
     const response = await
     fetch('https://eo-newdev.herokuapp.com/courses')
 
