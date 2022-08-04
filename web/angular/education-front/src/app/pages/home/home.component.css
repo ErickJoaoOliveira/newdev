@@ -2,12 +2,10 @@
   color: #000 !important;
   width: 100%;
   margin: 10px;
-  border-bottom: 1px solid rgb(90, 90, 90);
 }
 .card {
   width: 40%;
   background-color: #6d6d6d;
-  border-radius: 0px !important;
 }
 
 .card-header {

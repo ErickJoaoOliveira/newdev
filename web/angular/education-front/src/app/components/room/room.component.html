@@ -1,8 +1,9 @@
 <div  class="flex-grow-1">
   <div class="d-flex justify-content center">
     <div class="h-100 w-100 container-video">
-      <vm-youtube cookies="true" videoId="{{lessonParam?.videoId}}">
-      </vm-youtube>
+      <!-- <vm-youtube cookies="true" videoId="{{lessonParam?.videoId}}">
+      </vm-youtube> -->
+      <app-video-player [videoId]="lessonParam.videoId"></app-video-player>
     </div>
   </div>
 

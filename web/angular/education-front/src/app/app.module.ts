@@ -13,6 +13,8 @@ import { VimeModule } from '@vime/angular';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './error/error.component';
+import { CardComponent } from './card/card.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ErrorComponent } from './error/error.component';
     VideoPlayerComponent,
     HomeComponent,
     ErrorComponent,
+    CardComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
